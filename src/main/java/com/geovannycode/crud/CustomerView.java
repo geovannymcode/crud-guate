@@ -58,7 +58,6 @@ public class CustomerView extends VerticalLayout {
         searchField.setValueChangeMode(ValueChangeMode.EAGER);
         searchField.addValueChangeListener(e -> refreshGrid());
 
-        // Action buttons
         final Button resetBtn = new Button("Clear", VaadinIcon.FILE_REMOVE.create());
         resetBtn.addThemeVariants(ButtonVariant.LUMO_SMALL);
         resetBtn.addClickShortcut(Key.ESCAPE);
@@ -142,9 +141,7 @@ public class CustomerView extends VerticalLayout {
     private static Icon createIcon(VaadinIcon vaadinIcon, String label) {
         Icon icon = vaadinIcon.create();
         icon.getStyle().set("padding", "var(--lumo-space-xs");
-        // Accessible label
         icon.getElement().setAttribute("aria-label", label);
-        // Tooltip
         icon.getElement().setAttribute("title", label);
         return icon;
     }
@@ -163,13 +160,12 @@ public class CustomerView extends VerticalLayout {
                                 + "<vaadin-avatar img=\"${item.pictureUrl}\" name=\"${item.fullName}\" alt=\"User avatar\" color-index=\"${item.colorIndex}\"></vaadin-avatar>"
                                 + "  <vaadin-vertical-layout style=\"line-height: var(--lumo-line-height-m);\">"
                                 + "    <span style=\"font-size: var(--lumo-font-size-xs); color: var(--lumo-primary-text-color);\">"
-                                + "      ${item.firstName}" + "    </span>"
-                                + "    <span style=\"font-size: var(--lumo-font-size-m); \">"
-                                + "      ${item.lastName}" + "    </span>"
+                                + "      ${item.firstName} </span>"
+                                + "    <span style=\"font-size: var(--lumo-font-size-xs); color: var(--lumo-primary-text-color);\">"
+                                + "      ${item.lastName} </span>"
                                 + "  </vaadin-vertical-layout>"
                                 + "</vaadin-horizontal-layout>")
                 .withProperty("initials", customer -> {
-                    // Concatenar la primera letra del primer nombre y la primera letra del primer apellido
                     String firstNameInitial = customer.getFirstName() != null && !customer.getFirstName().isEmpty()
                             ? customer.getFirstName().substring(0, 1).toUpperCase()
                             : "";
@@ -189,9 +185,8 @@ public class CustomerView extends VerticalLayout {
                 .withProperty("firstName", Customer::getFirstName)
                 .withProperty("lastName", Customer::getLastName)
                 .withProperty("colorIndex", customer -> {
-                    int colorIndex = (customer.getFirstName().hashCode() + customer.getLastName().hashCode()) % 7 + 1;
+                    int colorIndex = Math.abs((customer.getFirstName().hashCode() + customer.getLastName().hashCode()) % 7) + 1;
                     return colorIndex;
                 });
     }
-
 }
