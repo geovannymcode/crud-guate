@@ -1,4 +1,4 @@
-package com.geovannycode.crud_guate;
+package com.geovannycode.crud;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;

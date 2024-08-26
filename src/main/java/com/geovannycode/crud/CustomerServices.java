@@ -1,11 +1,9 @@
-package com.geovannycode.crud_guate;
+package com.geovannycode.crud;
 
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Transactional
 @Service

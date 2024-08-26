@@ -1,4 +1,4 @@
-package com.geovannycode.crud_guate;
+package com.geovannycode.crud;
 
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.button.Button;

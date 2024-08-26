@@ -1,4 +1,4 @@
-package com.geovannycode.crud_guate;
+package com.geovannycode.crud;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Key;

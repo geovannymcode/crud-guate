@@ -1,13 +1,13 @@
-package com.geovannycode.crud_guate;
+package com.geovannycode.crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudGuateApplication {
+public class CrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrudGuateApplication.class, args);
+		SpringApplication.run(CrudApplication.class, args);
 	}
 
 }
