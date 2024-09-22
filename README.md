@@ -4,20 +4,19 @@
 Este proyecto es una aplicación educativa para el jug de guatemala  CRUD (Crear, Leer, Actualizar, Eliminar) simple, construida con Vaadin utilizando el componente add-crud, respaldada por una base de datos PostgreSQL. Permite a los usuarios gestionar información de clientes, como nombre, detalles de contacto, fecha de nacimiento, profesión, género y estado.
 
 ## Tecnologías Utilizadas
-Frontend: Vaadin 24
-Backend: Java (Spring Boot)
-Componente CRUD: @add-crud (Vaadin Add-on)
-Base de datos: PostgreSQL
-Herramienta de construcción: Maven
-IDE: IntelliJ IDEA
-Docker (opcional): Configuración de PostgreSQL y despliegue del backend
+- Frontend: Vaadin 24
+- Backend: Java (Spring Boot)
+- Migración de base de datos: Flyway
+- Base de datos: PostgreSQL
+- Herramienta de construcción: Maven
+- IDE: IntelliJ IDEA
+- Docker (opcional): Configuración de PostgreSQL y despliegue del backend
 
 Requisitos Previos
-JDK 21
-Maven instalado
-PostgreSQL 12+ instalado
-Docker (opcional)
-Instrucciones de Instalación
+- JDK 21
+- Maven instalado
+- PostgreSQL 12+ instalado
+- Docker (opcional) Instrucciones de Instalación
 
 ## Clonar el Repositorio
 Inicialmente, deberá obtener una copia del código fuente alojado en GitHub. Abra una terminal en su sistema y ejecute el siguiente comando para clonar el repositorio:
