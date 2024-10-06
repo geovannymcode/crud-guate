@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -35,7 +37,8 @@ public class Customer {
     @Size(message = "The size must be between 1 and 50", min = 1, max = 50)
     private String lastName;
 
-    @Size(message = "The maximum size is 50", max = 50)
+    @NotBlank(message = "The user's e-mail address is required")
+    @Email(regexp = "^[^@]+@[^@]+\\.[a-zA-Z]{2,}$", message = "Enter your valid email address")
     private String email;
 
     @NotNull(message = "This field can not be blank")
