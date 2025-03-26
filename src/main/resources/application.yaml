@@ -1,0 +1,11 @@
+vaadin:
+  launch-browser: 'true'
+spring:
+  datasource:
+    username: ${DB_USERNAME:postgres}
+    url: ${DB_URL:jdbc:postgresql://localhost:15432/postgres}
+    password: ${DB_PASSWORD:postgres}
+  application:
+    name: crud-guate
+server:
+  port: '8081'
